@@ -13,7 +13,7 @@ import java.nio.ByteBuffer;
  */
 public interface GS16AO64CLibrary extends Library {
 	public static final String JNA_LIBRARY_NAME = "GS16AO64C";
-	public static final NativeLibrary JNA_NATIVE_LIB = NativeLibrary.getInstance(GS16AO64CLibrary.JNA_LIBRARY_NAME);
+	//public static final NativeLibrary JNA_NATIVE_LIB = NativeLibrary.getInstance(GS16AO64CLibrary.JNA_LIBRARY_NAME);
 	public static final GS16AO64CLibrary INSTANCE = (GS16AO64CLibrary)Native.loadLibrary(GS16AO64CLibrary.JNA_LIBRARY_NAME, GS16AO64CLibrary.class);
 	/** <i>native declaration : lib/66-16AO64/AO64eintface.h</i> */
 	public static final int BCR = (int)0x00;

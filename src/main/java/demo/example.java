@@ -11,7 +11,7 @@ import java.nio.ByteBuffer;
 
 public class example {
 
-    private static GS16AO64CLibrary INSTANCE = GS16AO64CLibrary.INSTANCE;
+    private static GS16AO64CLibrary INSTANCE; // = GS16AO64CLibrary.INSTANCE;
     private U32 ulNumBds, ulBdNum, ulAuxBdNum, ulError;
     private ByteBuffer pDeviceInfo;
     private U32 numChan;
@@ -29,7 +29,7 @@ public class example {
     public example()
     {
         // load the
-        String rootPath = System.getProperty("user.dir");
+/*        String rootPath = System.getProperty("user.dir");
         String libPath = (Platform.isWindows() ?
                 rootPath + "\\src\\lib\\win64\\16AO64_eDriver_C.lib" :
                 rootPath + "/src/lib/osx/16AO64_eDriver_C.dylib");      // currently, jnaerator does not make dylibs
@@ -38,7 +38,9 @@ public class example {
             INSTANCE = (GS16AO64CLibrary) Native.loadLibrary(libPath, GS16AO64CLibrary.class);
         } catch (Exception ex) {
             System.out.print("exception loading library = "+ex);
-        }
+        }*/
+
+        INSTANCE = GS16AO64CLibrary.INSTANCE;
 
         // hard set board num to 1 (int16)
         Pointer BdNum = new Memory(4);

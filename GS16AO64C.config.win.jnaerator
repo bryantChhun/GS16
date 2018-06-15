@@ -1,12 +1,11 @@
--library GS16AO64C
+-library GS16AO64_eDriver_C
 #-beautifyNames
 -f
 -o src/
 -rootPackage src
--package main.java.GS16AO64C.bindings
--arch win64 
--libFile lib/66-16AO64/16AO64_eDriver_C.lib
--dependencies 16AO64_eDriver_C.dll
+-package main.java.bindings
+-arch win64
+-libFile lib/66-16AO64/GS16AO64_eDriver_C.lib
 -runtime JNA
 -mode Directory
 lib/66-16AO64/AO64eintface.h
